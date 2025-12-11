@@ -12,28 +12,36 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: "Cairo", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
   direction: rtl;
   font-size: 16px;
+  overflow-x: hidden; /* يمنع ظهور السكروول الأفقي */
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .container {
   max-width: 1100px;
+  width: 95%; /* عشان يبقى مرن */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 a {
   text-decoration: none;
   color: var(--accent1);
   transition: color 0.3s;
+  word-break: break-word;
 }
 
 a:hover {
@@ -51,7 +59,7 @@ header {
 }
 
 .brand {
-  font-size: 28px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 900;
   color: var(--accent1);
   white-space: nowrap;
@@ -61,9 +69,13 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin: 0;
-  padding: 0;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+nav li {
+  white-space: nowrap;
 }
 
 nav a {
@@ -72,6 +84,8 @@ nav a {
   padding: 5px 10px;
   border-radius: 5px;
   transition: background 0.3s, color 0.3s;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -85,18 +99,19 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 56px;
-  margin: 0 0 10px;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 10px;
   color: var(--text);
   font-weight: 900;
   position: relative;
   display: inline-block;
+  word-break: break-word;
 }
 
 .hero h1::after {
   content: "ASP.NET Developer | Data Analyst";
   display: block;
-  font-size: 22px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 600;
   color: var(--accent2);
   margin-top: -5px;
@@ -106,8 +121,11 @@ nav a:hover {
   max-width: 700px;
   margin: 20px auto 30px;
   color: var(--muted);
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 300;
+  padding: 0 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .cv-button {
@@ -117,9 +135,13 @@ nav a:hover {
   padding: 12px 30px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   box-shadow: 0 0 15px var(--accent1);
   transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
 }
 
 .cv-button:hover {
@@ -136,10 +158,11 @@ nav a:hover {
 h2 {
   color: var(--accent2);
   margin-bottom: 25px;
-  font-size: 32px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   border-bottom: 3px solid var(--accent3);
   display: inline-block;
   padding-bottom: 5px;
+  word-break: break-word;
 }
 
 .card {
@@ -149,6 +172,8 @@ h2 {
   margin-bottom: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .card:hover {
@@ -170,11 +195,13 @@ h2 {
   color: var(--text);
   border-right: 4px solid var(--accent1);
   padding-right: 10px;
+  word-break: break-word;
 }
 
 .skill-item i {
   color: var(--accent1);
   font-size: 20px;
+  flex-shrink: 0;
 }
 
 .projects-container {
@@ -190,6 +217,8 @@ h2 {
   box-shadow: var(--box-shadow);
   transition: transform 0.3s, border 0.3s;
   border-bottom: 4px solid var(--accent2);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .project:hover {
@@ -200,16 +229,18 @@ h2 {
 .project h3 {
   color: var(--accent3);
   margin-top: 0;
-  font-size: 24px;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
   display: flex;
   align-items: center;
   gap: 10px;
+  word-break: break-word;
 }
 
 .project p {
   color: var(--muted);
   font-size: 15px;
   margin-bottom: 15px;
+  word-break: break-word;
 }
 
 .project-link {
@@ -217,6 +248,7 @@ h2 {
   font-weight: 600;
   margin-top: 10px;
   color: var(--accent1);
+  word-break: break-word;
 }
 
 .project-link i {
@@ -227,6 +259,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  word-break: break-word;
 }
 
 .contact-item {
@@ -236,11 +269,13 @@ h2 {
   font-size: 18px;
   font-weight: 600;
   color: var(--text);
+  word-break: break-word;
 }
 
 .contact-item i {
   color: var(--accent2);
   font-size: 22px;
+  flex-shrink: 0;
 }
 
 footer {
@@ -250,18 +285,23 @@ footer {
   padding: 25px 0;
   font-size: 14px;
   border-top: 1px solid var(--card);
+  word-break: break-word;
 }
 
 /* ====== Responsive Styles ====== */
 
-/* لو حجم الشاشة أقل من 768px */
-@media (max-width: 768px) {
+/* شاشات أقل من 1024px */
+@media (max-width: 1024px) {
   .skills-container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
   .projects-container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+}
+
+/* شاشات أقل من 768px */
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -280,28 +320,38 @@ footer {
     width: 100%;
     padding: 8px 10px;
   }
+  .skills-container {
+    grid-template-columns: 1fr !important;
+  }
+  .projects-container {
+    grid-template-columns: 1fr !important;
+  }
   .hero h1 {
-    font-size: 36px;
+    font-size: clamp(2rem, 5vw, 2.5rem);
   }
   .hero h1::after {
-    font-size: 16px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
   }
   .cv-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
   }
 }
 
-@media (max-width: 400px) {
+/* شاشات أقل من 480px */
+@media (max-width: 480px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: clamp(1.6rem, 6vw, 2rem);
   }
   .hero h1::after {
-    font-size: 14px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
   }
   .cv-button {
     width: 100%;
     text-align: center;
     padding: 12px 0;
+  }
+  nav a {
+    padding: 10px;
   }
 }

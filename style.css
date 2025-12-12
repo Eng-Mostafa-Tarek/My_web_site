@@ -7,7 +7,7 @@
   --text: #f0f6fc;
   --muted: #8b949e;
   --border-radius: 10px;
-  --box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 6px 15px rgba(0, 6, 128, 0.792);
 }
 
 * {
@@ -93,7 +93,6 @@ nav a:hover {
   background: var(--card);
 }
 
-/* ====== إضافة الصورة الشخصية ====== */
 .profile-image-container {
   display: flex;
   justify-content: center;
@@ -125,7 +124,7 @@ nav a:hover {
       0 0 20px var(--accent1),
       0 0 40px var(--accent1),
       0 0 60px var(--accent2),
-      inset 0 0 30px rgba(88, 166, 255, 0.2);
+      inset 0 0 30px rgba(255, 88, 88, 0.2);
   }
   100% {
     box-shadow: 
@@ -368,7 +367,6 @@ footer {
   word-break: break-word;
 }
 
-/* ====== Responsive Styles ====== */
 @media (max-width: 1024px) {
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -413,7 +411,6 @@ footer {
     padding: 10px 20px;
     font-size: clamp(1rem, 2vw, 1.1rem);
   }
-  /* تحسينات للصورة على الشاشات الصغيرة */
   .neon-circle {
     width: 180px;
     height: 180px;
@@ -439,7 +436,6 @@ footer {
   nav a {
     padding: 10px;
   }
-  /* تحسينات للصورة على الشاشات الصغيرة جداً */
   .neon-circle {
     width: 150px;
     height: 150px;

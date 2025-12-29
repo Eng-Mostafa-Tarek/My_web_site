@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mostafa Tarek | مطور ASP.NET ومحلل بيانات</title>
-    <meta
-      name="description"
-      content="صفحة شخصية احترافية للمطور Mostafa Tarek، متخصص في ASP.NET Core وتحليل البيانات."
-    />
-
-    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-F1E402J1VV"
@@ -20,602 +11,186 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
+
       gtag("config", "G-F1E402J1VV");
     </script>
 
-    <!-- Fonts & Icons -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mostafa Tarek | مطور ASP.NET ومحلل بيانات</title>
+    <meta
+      name="description"
+      content="صفحة شخصية احترافية للمطور Mostafa Tarek، متخصص في ASP.NET Core وتحليل البيانات."
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header" id="header">
-      <div class="nav-container">
-        <a href="#hero" class="logo">
-          <i class="fas fa-code logo-icon"></i>
-          <span>Mostafa</span>
-        </a>
-
-        <nav class="desktop-nav">
-          <a href="#hero" class="nav-link active">الرئيسية</a>
-          <a href="#about" class="nav-link">نبذة</a>
-          <a href="#projects" class="nav-link">المشاريع</a>
-          <a href="#contact" class="nav-link">تواصل</a>
+    <div class="container">
+      <header>
+        <div class="brand">Welcome</div>
+        <nav>
+          <ul>
+            <li><a href="#about">نبذة</a></li>
+            <li><a href="#skills">المهارات</a></li>
+            <li><a href="#projects">المشاريع</a></li>
+            <li><a href="#contact">تواصل</a></li>
+          </ul>
         </nav>
+      </header>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-menu-close" id="mobileMenuClose">
-        <i class="fas fa-times"></i>
-      </button>
-
-      <nav class="mobile-nav">
-        <a href="#hero" class="mobile-nav-link">الرئيسية</a>
-        <a href="#about" class="mobile-nav-link">نبذة</a>
-        <a href="#projects" class="mobile-nav-link">المشاريع</a>
-        <a href="#contact" class="mobile-nav-link">تواصل</a>
-      </nav>
-    </div>
-
-    <section class="hero-section" id="hero">
-      <canvas id="canvas"></canvas>
-
-      <div class="hero-content">
+      <section class="hero" id="about">
         <div class="profile-image-container">
           <div class="neon-circle">
             <img src="my_photo.jpg" alt="Mostafa Tarek" class="profile-image" />
+            <div class="neon-glow"></div>
           </div>
         </div>
 
-        <h1 class="hero-title">Mostafa Tarek</h1>
-        <h2 class="hero-subtitle">مطور ASP.NET Core | محلل بيانات</h2>
-        <p class="hero-description">
-          مطور <strong>ASP.NET Core</strong> متخصص في بناء تطبيقات الويب القوية
+        <h1>Mostafa Tarek</h1>
+        <p>
+          مطور <strong>ASP.NET Core</strong> ,متخصص في بناء تطبيقات الويب القوية
           الموثوقة باستخدام C#, MVC, و .NET. بالإضافة إلى خبرة قوية في مجال
           <strong>تحليل البيانات</strong>، حيث أقوم بتحويل البيانات الخام إلى
           رؤى قابلة للتنفيذ لدعم اتخاذ القرارات الاستراتيجية.
         </p>
-
         <a
           href="https://github.com/Eng-Mostafa-Tarek/About-me/blob/main/CV.pdf"
           class="cv-button"
         >
-          <i class="fas fa-download"></i> تحميل السيرة الذاتية
+          <i class="fas fa-download"></i> تحميل السيرة الذاتية (CV)
         </a>
+      </section>
 
-        <div class="tech-icons">
-          <div class="tech-icon"><i class="fab fa-microsoft"></i></div>
-          <div class="tech-icon"><i class="fab fa-python"></i></div>
-          <div class="tech-icon"><i class="fas fa-database"></i></div>
-          <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="tech-icon"><i class="fab fa-js-square"></i></div>
-          <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-count="15">0</span>
-            <span class="stat-label">مشروع</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="1">0</span>
-            <span class="stat-label">سنوات خبرة</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="100">0</span>
-            <span class="stat-label">% إلتزام</span>
-          </div>
-        </div>
-      </div>
-
-      <a href="#about" class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-      </a>
-    </section>
-
-    <section class="section section-light" id="about">
-      <div class="container">
-        <h2 class="section-title fade-in">نبذة عني</h2>
-        <p class="section-subtitle fade-in">
-          مطور متخصص في بناء تطبيقات الويب الحديثة باستخدام ASP.NET Core وتحليل
-          البيانات
-        </p>
-
+      <section class="section" id="skills">
+        <h2><i class="fas fa-code"></i> المهارات التقنية</h2>
         <div class="skills-container">
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fab fa-microsoft"></i> C# و ASP.NET Core MVC/Web API
           </div>
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fab fa-python"></i> Python
           </div>
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fas fa-database"></i> SQL Server / MySQL وقواعد البيانات
           </div>
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fas fa-chart-line"></i> Data Analysis و Power BI
           </div>
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fas fa-globe"></i> HTML, CSS, JavaScript (الواجهة)
           </div>
-          <div class="skill-item fade-in">
+          <div class="card skill-item">
             <i class="fab fa-git-alt"></i> Git و GitHub لإدارة الأكواد
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section-dark" id="projects">
-      <div class="container">
-        <h2 class="section-title fade-in">المشاريع</h2>
-        <p class="section-subtitle fade-in">أبرز المشاريع التي قمت بتطويرها</p>
-
-        <div class="projects-grid">
-          <div class="project-card fade-in">
-            <div class="project-header">
-              <div class="project-icon-container">
-                <i class="fas fa-server project-icon"></i>
-              </div>
-              <div class="project-badge">Back-end</div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">نظام إدارة مكتبة (Back-end)</h3>
-              <p class="project-description">
-                تطوير نظام سطح مكتب (Windows Forms) لإدارة شاملة للكتب والأعضاء
-                وعمليات الاستعارة. مرتبط بقاعدة بيانات MySQL لضمان دقة البيانات
-                وسرعة الوصول.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Windows Forms</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-              <div class="project-footer">
-                <a
-                  href="https://github.com/Eng-Mostafa-Tarek/ITI_project"
-                  target="_blank"
-                  class="project-link"
-                >
-                  عرض المشروع <i class="fas fa-external-link-alt"></i>
-                </a>
-                <div class="project-stats">
-                  <span class="project-stat"
-                    ><i class="fas fa-code"></i> .NET</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card fade-in">
-            <div class="project-header">
-              <div class="project-icon-container">
-                <i class="fas fa-mobile-alt project-icon"></i>
-              </div>
-              <div class="project-badge">Mobile</div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">تطبيق سبحتي (Flutter App)</h3>
-              <p class="project-description">
-                تطبيق محمول (Cross-platform) مطوّر باستخدام فلاتر (Flutter)،
-                يوفر أذكار الصباح والمساء، وسبحة إلكترونية بتصميم نظيف وواجهة
-                مستخدم سهلة الاستخدام.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Dart</span>
-                <span class="tech-tag">Mobile</span>
-              </div>
-              <div class="project-footer">
-                <a
-                  href="https://github.com/Eng-Mostafa-Tarek/Flutter-project/tree/master/flutter_application_1"
-                  target="_blank"
-                  class="project-link"
-                >
-                  عرض المشروع <i class="fas fa-external-link-alt"></i>
-                </a>
-                <div class="project-stats">
-                  <span class="project-stat"
-                    ><i class="fas fa-mobile"></i> Android/iOS</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card fade-in">
-            <div class="project-header">
-              <div class="project-icon-container">
-                <i class="fas fa-chart-pie project-icon"></i>
-              </div>
-              <div class="project-badge">Data Analysis</div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">تحليل بيانات WWI باستخدام Power BI</h3>
-              <p class="project-description">
-                مشروع متقدم لتحليل بيانات مبيعات ومخزون WWI، ينتج لوحات تحكم
-                (Dashboards) تفاعلية توضح الأداء، الاتجاهات، وتسهل اتخاذ
-                القرارات المبنية على البيانات.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Data Analysis</span>
-                <span class="tech-tag">SQL</span>
-              </div>
-              <div class="project-footer">
-                <a href="#" class="project-link">
-                  قيد التطوير <i class="fas fa-tools"></i>
-                </a>
-                <div class="project-stats">
-                  <span class="project-stat"
-                    ><i class="fas fa-chart-bar"></i> Data</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="contact">
-      <div class="container">
-        <h2 class="section-title fade-in">تواصل معي</h2>
-        <p class="section-subtitle fade-in">
-          متاح لمناقشة فرص العمل والمشاريع الجديدة
-        </p>
-
-        <div class="contact-content">
-          <div class="contact-info fade-in">
-            <h3>تواصل مع Mostafa Tarek</h3>
+      <section class="section" id="projects">
+        <h2><i class="fas fa-laptop-code"></i> أبرز المشاريع</h2>
+        <div class="projects-container">
+          <div class="project">
+            <h3><i class="fas fa-server"></i> نظام إدارة مكتبة (Back-end)</h3>
             <p>
-              أنا متاح لمناقشة فرص العمل، المشاريع الجديدة، أو تبادل المعرفة في
-              مجالات ASP.NET وتحليل البيانات. لا تتردد في التواصل معي لأي
-              استفسار أو فرصة عمل.
+              تطوير نظام سطح مكتب (Windows Forms) لإدارة شاملة للكتب والأعضاء
+              وعمليات الاستعارة. مرتبط بقاعدة بيانات MySQL لضمان دقة البيانات
+              وسرعة الوصول.
             </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-at"></i>
-                </div>
-                <div class="contact-text">
-                  <h4>البريد الإلكتروني</h4>
-                  <a href="mailto:mbdwy7484@gmail.com">mbdwy7484@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fab fa-github"></i>
-                </div>
-                <div class="contact-text">
-                  <h4>GitHub</h4>
-                  <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
-                    >github.com/Eng-Mostafa-Tarek</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="contact-text">
-                  <h4>LinkedIn</h4>
-                  <a
-                    href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
-                    target="_blank"
-                    >linkedin.com/in/mostafa-tarek</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="contact-text">
-                  <h4>WhatsApp</h4>
-                  <a href="https://wa.me/201006876746" target="_blank"
-                    >+20 100 687 6746</a
-                  >
-                </div>
-              </div>
-            </div>
+            <a
+              href="https://github.com/Eng-Mostafa-Tarek/ITI_project"
+              target="_blank"
+              class="project-link"
+            >
+              عرض المشروع على GitHub <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
 
-          <div class="contact-form fade-in">
-            <h3>أرسل رسالة</h3>
-            <form id="contactForm">
-              <div class="form-group">
-                <label class="form-label" for="name">الاسم بالكامل</label>
-                <input type="text" id="name" class="form-input" required />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="email">البريد الإلكتروني</label>
-                <input type="email" id="email" class="form-input" required />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="message">الرسالة</label>
-                <textarea
-                  id="message"
-                  class="form-input"
-                  required
-                  placeholder="أخبرني عن مشروعك..."
-                ></textarea>
-              </div>
-
-              <button type="submit" class="submit-btn">إرسال الرسالة</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>Mostafa Tarek</h3>
+          <div class="project">
+            <h3><i class="fas fa-mobile-alt"></i> تطبيق سبحتي (Flutter App)</h3>
             <p>
-              مطور ASP.NET Core ومحلل بيانات متخصص في بناء تطبيقات الويب وتحليل
-              البيانات لاتخاذ القرارات الاستراتيجية.
+              تطبيق محمول (Cross-platform) مطوّر باستخدام فلاتر (Flutter)، يوفر
+              أذكار الصباح والمساء، وسبحة إلكترونية بتصميم نظيف وواجهة مستخدم
+              سهلة الاستخدام.
             </p>
-            <div class="social-links">
-              <a
-                href="https://github.com/Eng-Mostafa-Tarek"
-                target="_blank"
-                class="social-link"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
-                target="_blank"
-                class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://wa.me/201006876746"
-                target="_blank"
-                class="social-link"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:mbdwy7484@gmail.com" class="social-link"
-                ><i class="fas fa-envelope"></i
-              ></a>
-            </div>
+            <a
+              href="https://github.com/Eng-Mostafa-Tarek/Flutter-project/tree/master/flutter_application_1"
+              target="_blank"
+              class="project-link"
+            >
+              عرض المشروع (قيد التجهيز)
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
 
-          <div class="footer-column">
-            <h3>روابط سريعة</h3>
-            <div class="footer-links">
-              <a href="#hero" class="footer-link">الرئيسية</a>
-              <a href="#about" class="footer-link">نبذة</a>
-              <a href="#projects" class="footer-link">المشاريع</a>
-              <a href="#contact" class="footer-link">تواصل</a>
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h3>المهارات</h3>
-            <div class="footer-links">
-              <a href="#about" class="footer-link">ASP.NET Core</a>
-              <a href="#about" class="footer-link">تحليل البيانات</a>
-              <a href="#about" class="footer-link">C# Programming</a>
-              <a href="#about" class="footer-link">Power BI</a>
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h3>التواصل</h3>
-            <div class="footer-links">
-              <a href="mailto:mbdwy7484@gmail.com" class="footer-link"
-                >mbdwy7484@gmail.com</a
-              >
-              <a
-                href="https://wa.me/201006876746"
-                target="_blank"
-                class="footer-link"
-                >+20 100 687 6746</a
-              >
-              <a
-                href="https://github.com/Eng-Mostafa-Tarek"
-                target="_blank"
-                class="footer-link"
-                >GitHub</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>© 2026 Mostafa Tarek. جميع الحقوق محفوظة.</p>
-          <div class="developer-credit">
+          <div class="project">
+            <h3>
+              <i class="fas fa-chart-pie"></i> تحليل بيانات WWI باستخدام Power
+              BI
+            </h3>
             <p>
-              صمم بواسطة
-              <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
-                >Mostafa Tarek</a
-              >
+              مشروع متقدم لتحليل بيانات مبيعات ومخزون WWI، ينتج لوحات تحكم
+              (Dashboards) تفاعلية توضح الأداء، الاتجاهات، وتسهل اتخاذ القرارات
+              المبنية على البيانات.
             </p>
+            <a href="#" target="_blank" class="project-link">
+              يتم العمل عليها حاليا (قيد التجهيز)
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
 
-    <!-- JavaScript -->
-    <script type="module">
-      import TubesCursor from "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js";
+      <section class="section" id="contact">
+        <h2><i class="fas fa-envelope"></i> تواصل معي</h2>
+        <div class="card contact-info">
+          <p style="color: var(--text)">
+            أنا متاح لمناقشة فرص العمل، المشاريع الجديدة، أو تبادل المعرفة في
+            مجالات ASP.NET وتحليل البيانات.
+          </p>
+          <div class="contact-item">
+            <i class="fas fa-at"></i> البريد الإلكتروني:
+            <a href="mailto:mbdwy7484@gmail.com" style="color: var(--accent1)"
+              >mbdwy7484@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i> GitHub:
+            <a
+              href="https://github.com/Eng-Mostafa-Tarek"
+              target="_blank"
+              style="color: var(--accent1)"
+              >github.com/Mostafa Tarek</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i> LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/mostafa-tarek-95048336b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              style="color: var(--accent1)"
+              >linkedin-profile</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i> whatsapp:
+            <a
+              href="https://wa.me/201006876746"
+              target="_blank"
+              style="color: var(--accent1)"
+              >contact on whatsapp</a
+            >
+          </div>
+        </div>
+      </section>
 
-      const app = TubesCursor(document.getElementById("canvas"), {
-        tubes: {
-          colors: ["#58a6ff", "#5300b9", "#ffffff", "#d0d0d0"],
-          lights: {
-            intensity: 100,
-            colors: ["#58a6ff", "#5300b9", "#ffffff"],
-          },
-        },
-      });
-
-      document.getElementById("canvas").style.backgroundColor = "transparent";
-
-      // Mobile Menu
-      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileMenuClose = document.getElementById("mobileMenuClose");
-      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-
-      mobileMenuBtn.addEventListener("click", function () {
-        mobileMenu.classList.add("active");
-        document.body.style.overflow = "hidden";
-      });
-
-      mobileMenuClose.addEventListener("click", function () {
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "auto";
-      });
-
-      mobileNavLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          mobileMenu.classList.remove("active");
-          document.body.style.overflow = "auto";
-        });
-      });
-
-      // Smooth Scrolling
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          if (targetId === "#") return;
-
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth",
-            });
-          }
-        });
-      });
-
-      // Contact Form
-      const contactForm = document.getElementById("contactForm");
-      if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("شكراً على رسالتك! سأتواصل معك قريباً.");
-          contactForm.reset();
-        });
-      }
-
-      // Animations
-      const fadeElements = document.querySelectorAll(".fade-in");
-      const statNumbers = document.querySelectorAll(".stat-number");
-
-      function checkScroll() {
-        fadeElements.forEach((element) => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-
-          if (elementTop < windowHeight - 100) {
-            element.classList.add("visible");
-          }
-        });
-
-        // Animate counter numbers
-        statNumbers.forEach((number) => {
-          const numberTop = number.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-
-          if (
-            numberTop < windowHeight - 100 &&
-            !number.classList.contains("animated")
-          ) {
-            animateCountUp(number);
-          }
-        });
-      }
-
-      function animateCountUp(element) {
-        element.classList.add("animated");
-        const target = parseInt(element.getAttribute("data-count"));
-        const suffix = element.textContent.includes("+")
-          ? "+"
-          : element.textContent.includes("%")
-          ? "%"
-          : "";
-
-        let count = 0;
-        const duration = 1500;
-        const increment = target / (duration / 16);
-
-        function updateCount() {
-          count += increment;
-          if (count < target) {
-            element.textContent = Math.floor(count) + suffix;
-            requestAnimationFrame(updateCount);
-          } else {
-            element.textContent = target + suffix;
-          }
-        }
-
-        updateCount();
-      }
-
-      // Header scroll effect
-      window.addEventListener("scroll", function () {
-        const header = document.getElementById("header");
-        if (window.scrollY > 50) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-
-        checkScroll();
-      });
-
-      // Initial check for animations
-      checkScroll();
-
-      // Nav link active state
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-link");
-
-      function updateActiveNavLink() {
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop - 100) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", updateActiveNavLink);
-    </script>
+      <footer>© 2026 All rights reserved. Designed by Mostafa Tarek</footer>
+    </div>
   </body>
 </html>

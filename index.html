@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Tarek | مطور ASP.NET ومحلل بيانات</title>
+    <meta
+      name="description"
+      content="صفحة شخصية احترافية للمطور Mostafa Tarek، متخصص في ASP.NET Core وتحليل البيانات."
+    />
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-F1E402J1VV"
@@ -11,186 +20,779 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-F1E402J1VV");
     </script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mostafa Tarek | مطور ASP.NET ومحلل بيانات</title>
-    <meta
-      name="description"
-      content="صفحة شخصية احترافية للمطور Mostafa Tarek، متخصص في ASP.NET Core وتحليل البيانات."
-    />
+    <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="brand">Welcome</div>
-        <nav>
-          <ul>
-            <li><a href="#about">نبذة</a></li>
-            <li><a href="#skills">المهارات</a></li>
-            <li><a href="#projects">المشاريع</a></li>
-            <li><a href="#contact">تواصل</a></li>
-          </ul>
-        </nav>
-      </header>
+    <!-- Background Animation -->
+    <div class="background-animation">
+      <div class="particles-container" id="particles"></div>
+      <div class="gradient-overlay"></div>
+    </div>
 
-      <section class="hero" id="about">
+    <header class="header" id="header">
+      <div class="nav-container">
+        <a href="#hero" class="logo">
+          <i class="fas fa-code logo-icon"></i>
+          <span>Mostafa</span>
+        </a>
+
+        <nav class="desktop-nav">
+          <a href="#hero" class="nav-link active">الرئيسية</a>
+          <a href="#about" class="nav-link">نبذة</a>
+          <a href="#projects" class="nav-link">المشاريع</a>
+          <a href="#contact" class="nav-link">تواصل</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileMenuClose">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <nav class="mobile-nav">
+        <a href="#hero" class="mobile-nav-link">الرئيسية</a>
+        <a href="#about" class="mobile-nav-link">نبذة</a>
+        <a href="#projects" class="mobile-nav-link">المشاريع</a>
+        <a href="#contact" class="mobile-nav-link">تواصل</a>
+      </nav>
+    </div>
+
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
         <div class="profile-image-container">
           <div class="neon-circle">
-            <img src="my_photo.jpg" alt="Mostafa Tarek" class="profile-image" />
-            <div class="neon-glow"></div>
+            <img
+              src="my_photo.jpg"
+              alt="Mostafa Tarek"
+              class="profile-image"
+              onerror="this.src='https://via.placeholder.com/200?text=Mostafa+Tarek'"
+            />
           </div>
         </div>
 
-        <h1>Mostafa Tarek</h1>
-        <p>
-          مطور <strong>ASP.NET Core</strong> ,متخصص في بناء تطبيقات الويب القوية
+        <h1 class="hero-title">Mostafa Tarek</h1>
+        <h2 class="hero-subtitle">مطور ASP.NET Core | محلل بيانات</h2>
+        <p class="hero-description">
+          مطور <strong>ASP.NET Core</strong> متخصص في بناء تطبيقات الويب القوية
           الموثوقة باستخدام C#, MVC, و .NET. بالإضافة إلى خبرة قوية في مجال
           <strong>تحليل البيانات</strong>، حيث أقوم بتحويل البيانات الخام إلى
           رؤى قابلة للتنفيذ لدعم اتخاذ القرارات الاستراتيجية.
         </p>
+
         <a
           href="https://github.com/Eng-Mostafa-Tarek/About-me/blob/main/CV.pdf"
           class="cv-button"
         >
-          <i class="fas fa-download"></i> تحميل السيرة الذاتية (CV)
+          <i class="fas fa-download"></i> تحميل السيرة الذاتية
         </a>
-      </section>
 
-      <section class="section" id="skills">
-        <h2><i class="fas fa-code"></i> المهارات التقنية</h2>
+        <div class="tech-icons">
+          <div class="tech-icon"><i class="fab fa-microsoft"></i></div>
+          <div class="tech-icon"><i class="fab fa-python"></i></div>
+          <div class="tech-icon"><i class="fas fa-database"></i></div>
+          <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+          <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="15">0</span>
+            <span class="stat-label">مشروع</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="1">0</span>
+            <span class="stat-label">سنوات خبرة</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span>
+            <span class="stat-label">% إلتزام</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container">
+        <h2 class="section-title fade-in">نبذة عني</h2>
+        <p class="section-subtitle fade-in">
+          مطور متخصص في بناء تطبيقات الويب الحديثة باستخدام ASP.NET Core وتحليل
+          البيانات
+        </p>
+
         <div class="skills-container">
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fab fa-microsoft"></i> C# و ASP.NET Core MVC/Web API
           </div>
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fab fa-python"></i> Python
           </div>
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fas fa-database"></i> SQL Server / MySQL وقواعد البيانات
           </div>
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fas fa-chart-line"></i> Data Analysis و Power BI
           </div>
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fas fa-globe"></i> HTML, CSS, JavaScript (الواجهة)
           </div>
-          <div class="card skill-item">
+          <div class="skill-item fade-in">
             <i class="fab fa-git-alt"></i> Git و GitHub لإدارة الأكواد
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="projects">
-        <h2><i class="fas fa-laptop-code"></i> أبرز المشاريع</h2>
-        <div class="projects-container">
-          <div class="project">
-            <h3><i class="fas fa-server"></i> نظام إدارة مكتبة (Back-end)</h3>
-            <p>
-              تطوير نظام سطح مكتب (Windows Forms) لإدارة شاملة للكتب والأعضاء
-              وعمليات الاستعارة. مرتبط بقاعدة بيانات MySQL لضمان دقة البيانات
-              وسرعة الوصول.
-            </p>
-            <a
-              href="https://github.com/Eng-Mostafa-Tarek/ITI_project"
-              target="_blank"
-              class="project-link"
-            >
-              عرض المشروع على GitHub <i class="fas fa-external-link-alt"></i>
-            </a>
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <h2 class="section-title fade-in">المشاريع</h2>
+        <p class="section-subtitle fade-in">أبرز المشاريع التي قمت بتطويرها</p>
+
+        <div class="projects-grid">
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-server project-icon"></i>
+              </div>
+              <div class="project-badge">Back-end</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">نظام إدارة مكتبة (Back-end)</h3>
+              <p class="project-description">
+                تطوير نظام سطح مكتب (Windows Forms) لإدارة شاملة للكتب والأعضاء
+                وعمليات الاستعارة. مرتبط بقاعدة بيانات MySQL لضمان دقة البيانات
+                وسرعة الوصول.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Windows Forms</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-footer">
+                <a
+                  href="https://github.com/Eng-Mostafa-Tarek/ITI_project"
+                  target="_blank"
+                  class="project-link"
+                >
+                  عرض المشروع <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-code"></i> .NET</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="project">
-            <h3><i class="fas fa-mobile-alt"></i> تطبيق سبحتي (Flutter App)</h3>
-            <p>
-              تطبيق محمول (Cross-platform) مطوّر باستخدام فلاتر (Flutter)، يوفر
-              أذكار الصباح والمساء، وسبحة إلكترونية بتصميم نظيف وواجهة مستخدم
-              سهلة الاستخدام.
-            </p>
-            <a
-              href="https://github.com/Eng-Mostafa-Tarek/Flutter-project/tree/master/flutter_application_1"
-              target="_blank"
-              class="project-link"
-            >
-              عرض المشروع (قيد التجهيز)
-              <i class="fas fa-external-link-alt"></i>
-            </a>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-mobile-alt project-icon"></i>
+              </div>
+              <div class="project-badge">Mobile</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">تطبيق سبحتي (Flutter App)</h3>
+              <p class="project-description">
+                تطبيق محمول (Cross-platform) مطوّر باستخدام فلاتر (Flutter)،
+                يوفر أذكار الصباح والمساء، وسبحة إلكترونية بتصميم نظيف وواجهة
+                مستخدم سهلة الاستخدام.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Mobile</span>
+              </div>
+              <div class="project-footer">
+                <a
+                  href="https://github.com/Eng-Mostafa-Tarek/Flutter-project/tree/master/flutter_application_1"
+                  target="_blank"
+                  class="project-link"
+                >
+                  عرض المشروع <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-mobile"></i> Android/iOS</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="project">
-            <h3>
-              <i class="fas fa-chart-pie"></i> تحليل بيانات WWI باستخدام Power
-              BI
-            </h3>
-            <p>
-              مشروع متقدم لتحليل بيانات مبيعات ومخزون WWI، ينتج لوحات تحكم
-              (Dashboards) تفاعلية توضح الأداء، الاتجاهات، وتسهل اتخاذ القرارات
-              المبنية على البيانات.
-            </p>
-            <a href="#" target="_blank" class="project-link">
-              يتم العمل عليها حاليا (قيد التجهيز)
-              <i class="fas fa-external-link-alt"></i>
-            </a>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-chart-pie project-icon"></i>
+              </div>
+              <div class="project-badge">Data Analysis</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">تحليل بيانات WWI باستخدام Power BI</h3>
+              <p class="project-description">
+                مشروع متقدم لتحليل بيانات مبيعات ومخزون WWI، ينتج لوحات تحكم
+                (Dashboards) تفاعلية توضح الأداء، الاتجاهات، وتسهل اتخاذ
+                القرارات المبنية على البيانات.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  قيد التطوير <i class="fas fa-tools"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-chart-bar"></i> Data</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="contact">
-        <h2><i class="fas fa-envelope"></i> تواصل معي</h2>
-        <div class="card contact-info">
-          <p style="color: var(--text)">
-            أنا متاح لمناقشة فرص العمل، المشاريع الجديدة، أو تبادل المعرفة في
-            مجالات ASP.NET وتحليل البيانات.
-          </p>
-          <div class="contact-item">
-            <i class="fas fa-at"></i> البريد الإلكتروني:
-            <a href="mailto:mbdwy7484@gmail.com" style="color: var(--accent1)"
-              >mbdwy7484@gmail.com</a
-            >
+    <section class="section section-light" id="contact">
+      <div class="container">
+        <h2 class="section-title fade-in">تواصل معي</h2>
+        <p class="section-subtitle fade-in">
+          متاح لمناقشة فرص العمل والمشاريع الجديدة
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-info fade-in">
+            <h3>تواصل مع Mostafa Tarek</h3>
+            <p>
+              أنا متاح لمناقشة فرص العمل، المشاريع الجديدة، أو تبادل المعرفة في
+              مجالات ASP.NET وتحليل البيانات. لا تتردد في التواصل معي لأي
+              استفسار أو فرصة عمل.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-at"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>البريد الإلكتروني</h4>
+                  <a href="mailto:mbdwy7484@gmail.com">mbdwy7484@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
+                    >github.com/Eng-Mostafa-Tarek</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
+                    target="_blank"
+                    >linkedin.com/in/mostafa-tarek</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>WhatsApp</h4>
+                  <a href="https://wa.me/201006876746" target="_blank"
+                    >+20 100 687 6746</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="contact-item">
-            <i class="fab fa-github"></i> GitHub:
-            <a
-              href="https://github.com/Eng-Mostafa-Tarek"
-              target="_blank"
-              style="color: var(--accent1)"
-              >github.com/Mostafa Tarek</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i> LinkedIn:
-            <a
-              href="https://www.linkedin.com/in/mostafa-tarek-95048336b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank"
-              style="color: var(--accent1)"
-              >linkedin-profile</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-whatsapp"></i> whatsapp:
-            <a
-              href="https://wa.me/201006876746"
-              target="_blank"
-              style="color: var(--accent1)"
-              >contact on whatsapp</a
-            >
+
+          <div class="contact-form fade-in">
+            <h3>أرسل رسالة مباشرة</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="name">الاسم بالكامل *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  required
+                  placeholder="أدخل اسمك"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email"
+                  >البريد الإلكتروني *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  placeholder="example@email.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">الرسالة *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input"
+                  required
+                  placeholder="أخبرني عن مشروعك أو اقتراحك..."
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> إرسال الرسالة
+              </button>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer>© 2026 All rights reserved. Designed by Mostafa Tarek</footer>
-    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Mostafa Tarek</h3>
+            <p>
+              مطور ASP.NET Core ومحلل بيانات متخصص في بناء تطبيقات الويب وتحليل
+              البيانات لاتخاذ القرارات الاستراتيجية.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/Eng-Mostafa-Tarek"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://wa.me/201006876746"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="mailto:mbdwy7484@gmail.com" class="social-link"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>روابط سريعة</h3>
+            <div class="footer-links">
+              <a href="#hero" class="footer-link">الرئيسية</a>
+              <a href="#about" class="footer-link">نبذة</a>
+              <a href="#projects" class="footer-link">المشاريع</a>
+              <a href="#contact" class="footer-link">تواصل</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>المهارات</h3>
+            <div class="footer-links">
+              <a href="#about" class="footer-link">ASP.NET Core</a>
+              <a href="#about" class="footer-link">تحليل البيانات</a>
+              <a href="#about" class="footer-link">C# Programming</a>
+              <a href="#about" class="footer-link">Power BI</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>التواصل</h3>
+            <div class="footer-links">
+              <a href="mailto:mbdwy7484@gmail.com" class="footer-link"
+                >mbdwy7484@gmail.com</a
+              >
+              <a
+                href="https://wa.me/201006876746"
+                target="_blank"
+                class="footer-link"
+                >+20 100 687 6746</a
+              >
+              <a
+                href="https://github.com/Eng-Mostafa-Tarek"
+                target="_blank"
+                class="footer-link"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Mostafa Tarek. جميع الحقوق محفوظة.</p>
+          <div class="developer-credit">
+            <p>
+              صمم بواسطة
+              <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
+                >Mostafa Tarek</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Background Particles Animation
+      function createParticles() {
+        const particlesContainer = document.getElementById("particles");
+        const particleCount = window.innerWidth < 768 ? 30 : 50;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+
+          // Random size between 1px and 3px
+          const size = Math.random() * 2 + 1;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+
+          // Random position
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.top = `${Math.random() * 100}%`;
+
+          // Random animation duration (slow)
+          const duration = Math.random() * 20 + 20;
+          particle.style.animationDuration = `${duration}s`;
+
+          // Random animation delay
+          const delay = Math.random() * 5;
+          particle.style.animationDelay = `${delay}s`;
+
+          // Random opacity
+          particle.style.opacity = Math.random() * 0.3 + 0.1;
+
+          particlesContainer.appendChild(particle);
+        }
+      }
+
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+
+      mobileMenuClose.addEventListener("click", function () {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "auto";
+        });
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // CONTACT FORM - السهل والمضمون
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          // Get button
+          const submitBtn = this.querySelector(".submit-btn");
+          const originalText = submitBtn.innerHTML;
+
+          // Validate
+          if (!name || !email || !message) {
+            alert("⚠️ يرجى ملء جميع الحقول المطلوبة");
+            return;
+          }
+
+          // Show loading
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> جارٍ الإرسال...';
+          submitBtn.disabled = true;
+
+          // Save message to localStorage (لرؤية الرسائل لاحقاً)
+          const messages = JSON.parse(
+            localStorage.getItem("portfolio_messages") || "[]"
+          );
+          const newMessage = {
+            id: Date.now(),
+            name: name,
+            email: email,
+            message: message,
+            date: new Date().toLocaleString("ar-EG"),
+            read: false,
+          };
+
+          messages.push(newMessage);
+          localStorage.setItem("portfolio_messages", JSON.stringify(messages));
+
+          // Show success message
+          setTimeout(() => {
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الإرسال!';
+            submitBtn.style.background =
+              "linear-gradient(90deg, #2ecc71, #27ae60)";
+
+            // Open email client
+            const mailtoLink = `mailto:mbdwy7484@gmail.com?subject=رسالة من ${encodeURIComponent(
+              name
+            )}&body=الاسم: ${encodeURIComponent(
+              name
+            )}%0D%0Aالبريد: ${encodeURIComponent(
+              email
+            )}%0D%0Aالرسالة: ${encodeURIComponent(
+              message
+            )}%0D%0A%0D%0Aتم الإرسال من الموقع الشخصي`;
+
+            // Ask user to send via email
+            setTimeout(() => {
+              const confirmSend = confirm(
+                `✅ تم حفظ رسالتك بنجاح!\n\nهل تريد فتح بريدك الإلكتروني لإرسال الرسالة مباشرة؟\n\nالاسم: ${name}\nالبريد: ${email}`
+              );
+
+              if (confirmSend) {
+                window.location.href = mailtoLink;
+              }
+
+              // Reset form
+              contactForm.reset();
+
+              // Reset button after 2 seconds
+              setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = "";
+                submitBtn.disabled = false;
+              }, 2000);
+            }, 500);
+          }, 1500);
+        });
+      }
+
+      // View Messages Function (لرؤية الرسائل المخزنة)
+      function viewMessages() {
+        const messages = JSON.parse(
+          localStorage.getItem("portfolio_messages") || "[]"
+        );
+
+        if (messages.length === 0) {
+          alert("📭 لا توجد رسائل مخزنة بعد");
+          return;
+        }
+
+        let messageList = "📨 الرسائل المخزنة:\n\n";
+        messages.forEach((msg, index) => {
+          messageList += `${index + 1}. ${msg.name} (${msg.email})\n`;
+          messageList += `   📅 ${msg.date}\n`;
+          messageList += `   💬 ${msg.message.substring(0, 50)}...\n\n`;
+        });
+
+        messageList += `\nإجمالي الرسائل: ${messages.length}`;
+        alert(messageList);
+      }
+
+      // Add view messages button to console
+      // بعد كل الكود السابق، أضف هذا في النهاية:
+
+      // تخزين الرسائل في localStorage (كما هي)
+      // لا تغير شيئاً هنا
+
+      // رسالة مخفية في الكونسول للوصول للرسائل
+      console.log(`
+🔐 ===== Mostafa Tarek Admin =====
+📌 للوصول للرسائل: افتح admin.html على جهازك
+📌 كلمة المرور: mostafa123
+📌 أو استخدم الكونسول: viewMessages()
+==================================
+`);
+
+      window.viewMessages = viewMessages;
+
+      // Animations
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const statNumbers = document.querySelectorAll(".stat-number");
+
+      function checkScroll() {
+        fadeElements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("visible");
+          }
+        });
+
+        // Animate counter numbers
+        statNumbers.forEach((number) => {
+          const numberTop = number.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (
+            numberTop < windowHeight - 100 &&
+            !number.classList.contains("animated")
+          ) {
+            animateCountUp(number);
+          }
+        });
+      }
+
+      function animateCountUp(element) {
+        element.classList.add("animated");
+        const target = parseInt(element.getAttribute("data-count"));
+        const suffix = element.textContent.includes("+")
+          ? "+"
+          : element.textContent.includes("%")
+          ? "%"
+          : "";
+
+        let count = 0;
+        const duration = 1500;
+        const increment = target / (duration / 16);
+
+        function updateCount() {
+          count += increment;
+          if (count < target) {
+            element.textContent = Math.floor(count) + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            element.textContent = target + suffix;
+          }
+        }
+
+        updateCount();
+      }
+
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        checkScroll();
+      });
+
+      // Create particles on load
+      window.addEventListener("load", function () {
+        createParticles();
+        checkScroll(); // Initial check
+      });
+
+      // Recreate particles on resize
+      window.addEventListener("resize", function () {
+        const particlesContainer = document.getElementById("particles");
+        particlesContainer.innerHTML = "";
+        createParticles();
+      });
+
+      // Nav link active state
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      function updateActiveNavLink() {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNavLink);
+
+      // Initialize on load
+      window.addEventListener("load", function () {
+        createParticles();
+        checkScroll();
+        updateActiveNavLink();
+      });
+    </script>
   </body>
 </html>

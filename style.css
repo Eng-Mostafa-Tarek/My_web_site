@@ -1,447 +1,621 @@
-:root {
-  --bg: #0c0a0a;
-  --card: #414141;
-  --accent1: #58a6ff;
-  --accent2: #5300b9;
-  --accent3: #efefef;
-  --text: #f0f6fc;
-  --muted: #8b949e;
-  --border-radius: 10px;
-  --box-shadow: 0 6px 15px rgba(0, 6, 128, 0.792);
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Tarek | مطور ASP.NET ومحلل بيانات</title>
+    <meta
+      name="description"
+      content="صفحة شخصية احترافية للمطور Mostafa Tarek، متخصص في ASP.NET Core وتحليل البيانات."
+    />
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F1E402J1VV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-F1E402J1VV");
+    </script>
 
-body {
-  font-family: "Cairo", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  direction: rtl;
-  font-size: 16px;
-  overflow-x: hidden;
-  word-wrap: break-word;
-  word-break: break-word;
-}
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-.container {
-  max-width: 1100px;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 15px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="nav-container">
+        <a href="#hero" class="logo">
+          <i class="fas fa-code logo-icon"></i>
+          <span>Mostafa</span>
+        </a>
 
-a {
-  text-decoration: none;
-  color: var(--accent1);
-  transition: color 0.3s;
-  word-break: break-word;
-}
+        <nav class="desktop-nav">
+          <a href="#hero" class="nav-link active">الرئيسية</a>
+          <a href="#about" class="nav-link">نبذة</a>
+          <a href="#projects" class="nav-link">المشاريع</a>
+          <a href="#contact" class="nav-link">تواصل</a>
+        </nav>
 
-a:hover {
-  color: var(--accent2);
-}
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--card);
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileMenuClose">
+        <i class="fas fa-times"></i>
+      </button>
 
-.brand {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  font-weight: 900;
-  color: var(--accent1);
-  white-space: nowrap;
-}
+      <nav class="mobile-nav">
+        <a href="#hero" class="mobile-nav-link">الرئيسية</a>
+        <a href="#about" class="mobile-nav-link">نبذة</a>
+        <a href="#projects" class="mobile-nav-link">المشاريع</a>
+        <a href="#contact" class="mobile-nav-link">تواصل</a>
+      </nav>
+    </div>
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: flex-end;
-}
+    <section class="hero-section" id="hero">
+      <canvas id="canvas"></canvas>
 
-nav li {
-  white-space: nowrap;
-}
+      <div class="hero-content">
+        <div class="profile-image-container">
+          <div class="neon-circle">
+            <img src="my_photo.jpg" alt="Mostafa Tarek" class="profile-image" />
+          </div>
+        </div>
 
-nav a {
-  color: var(--muted);
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-  display: inline-block;
-  white-space: nowrap;
-}
+        <h1 class="hero-title">Mostafa Tarek</h1>
+        <h2 class="hero-subtitle">مطور ASP.NET Core | محلل بيانات</h2>
+        <p class="hero-description">
+          مطور <strong>ASP.NET Core</strong> متخصص في بناء تطبيقات الويب القوية
+          الموثوقة باستخدام C#, MVC, و .NET. بالإضافة إلى خبرة قوية في مجال
+          <strong>تحليل البيانات</strong>، حيث أقوم بتحويل البيانات الخام إلى
+          رؤى قابلة للتنفيذ لدعم اتخاذ القرارات الاستراتيجية.
+        </p>
 
-nav a:hover {
-  color: var(--text);
-  background: var(--card);
-}
+        <a
+          href="https://github.com/Eng-Mostafa-Tarek/About-me/blob/main/CV.pdf"
+          class="cv-button"
+        >
+          <i class="fas fa-download"></i> تحميل السيرة الذاتية
+        </a>
 
-.profile-image-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-  position: relative;
-}
+        <div class="tech-icons">
+          <div class="tech-icon"><i class="fab fa-microsoft"></i></div>
+          <div class="tech-icon"><i class="fab fa-python"></i></div>
+          <div class="tech-icon"><i class="fas fa-database"></i></div>
+          <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+          <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+        </div>
 
-.neon-circle {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, var(--accent2), var(--accent1));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 
-    0 0 20px var(--accent1),
-    0 0 40px var(--accent1),
-    0 0 60px var(--accent2),
-    inset 0 0 30px rgba(88, 166, 255, 0.2);
-  animation: neon-pulse 3s infinite alternate;
-  z-index: 1;
-}
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="15">0</span>
+            <span class="stat-label">مشروع</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="1">0</span>
+            <span class="stat-label">سنوات خبرة</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span>
+            <span class="stat-label">% إلتزام</span>
+          </div>
+        </div>
+      </div>
 
-@keyframes neon-pulse {
-  0% {
-    box-shadow: 
-      0 0 20px var(--accent1),
-      0 0 40px var(--accent1),
-      0 0 60px var(--accent2),
-      inset 0 0 30px rgba(255, 88, 88, 0.2);
-  }
-  100% {
-    box-shadow: 
-      0 0 25px var(--accent1),
-      0 0 50px var(--accent1),
-      0 0 75px var(--accent2),
-      inset 0 0 40px rgba(88, 166, 255, 0.3);
-  }
-}
+      <a href="#about" class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
 
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid var(--bg);
-  z-index: 2;
-  position: relative;
-  transition: transform 0.3s ease;
-}
+    <section class="section section-light" id="about">
+      <div class="container">
+        <h2 class="section-title fade-in">نبذة عني</h2>
+        <p class="section-subtitle fade-in">
+          مطور متخصص في بناء تطبيقات الويب الحديثة باستخدام ASP.NET Core وتحليل
+          البيانات
+        </p>
 
-.profile-image:hover {
-  transform: scale(1.05);
-}
+        <div class="skills-container">
+          <div class="skill-item fade-in">
+            <i class="fab fa-microsoft"></i> C# و ASP.NET Core MVC/Web API
+          </div>
+          <div class="skill-item fade-in">
+            <i class="fab fa-python"></i> Python
+          </div>
+          <div class="skill-item fade-in">
+            <i class="fas fa-database"></i> SQL Server / MySQL وقواعد البيانات
+          </div>
+          <div class="skill-item fade-in">
+            <i class="fas fa-chart-line"></i> Data Analysis و Power BI
+          </div>
+          <div class="skill-item fade-in">
+            <i class="fas fa-globe"></i> HTML, CSS, JavaScript (الواجهة)
+          </div>
+          <div class="skill-item fade-in">
+            <i class="fab fa-git-alt"></i> Git و GitHub لإدارة الأكواد
+          </div>
+        </div>
+      </div>
+    </section>
 
-.neon-glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, 
-    transparent 30%, 
-    rgba(88, 166, 255, 0.1) 50%,
-    transparent 70%);
-  animation: glow-rotate 10s linear infinite;
-}
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <h2 class="section-title fade-in">المشاريع</h2>
+        <p class="section-subtitle fade-in">أبرز المشاريع التي قمت بتطويرها</p>
 
-@keyframes glow-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+        <div class="projects-grid">
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-server project-icon"></i>
+              </div>
+              <div class="project-badge">Back-end</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">نظام إدارة مكتبة (Back-end)</h3>
+              <p class="project-description">
+                تطوير نظام سطح مكتب (Windows Forms) لإدارة شاملة للكتب والأعضاء
+                وعمليات الاستعارة. مرتبط بقاعدة بيانات MySQL لضمان دقة البيانات
+                وسرعة الوصول.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Windows Forms</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-footer">
+                <a
+                  href="https://github.com/Eng-Mostafa-Tarek/ITI_project"
+                  target="_blank"
+                  class="project-link"
+                >
+                  عرض المشروع <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-code"></i> .NET</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
 
-.hero {
-  text-align: center;
-  padding: 60px 20px 40px;
-}
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-mobile-alt project-icon"></i>
+              </div>
+              <div class="project-badge">Mobile</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">تطبيق سبحتي (Flutter App)</h3>
+              <p class="project-description">
+                تطبيق محمول (Cross-platform) مطوّر باستخدام فلاتر (Flutter)،
+                يوفر أذكار الصباح والمساء، وسبحة إلكترونية بتصميم نظيف وواجهة
+                مستخدم سهلة الاستخدام.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Mobile</span>
+              </div>
+              <div class="project-footer">
+                <a
+                  href="https://github.com/Eng-Mostafa-Tarek/Flutter-project/tree/master/flutter_application_1"
+                  target="_blank"
+                  class="project-link"
+                >
+                  عرض المشروع <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-mobile"></i> Android/iOS</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
 
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin-bottom: 10px;
-  color: var(--text);
-  font-weight: 900;
-  position: relative;
-  display: inline-block;
-  word-break: break-word;
-}
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div class="project-icon-container">
+                <i class="fas fa-chart-pie project-icon"></i>
+              </div>
+              <div class="project-badge">Data Analysis</div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">تحليل بيانات WWI باستخدام Power BI</h3>
+              <p class="project-description">
+                مشروع متقدم لتحليل بيانات مبيعات ومخزون WWI، ينتج لوحات تحكم
+                (Dashboards) تفاعلية توضح الأداء، الاتجاهات، وتسهل اتخاذ
+                القرارات المبنية على البيانات.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+              <div class="project-footer">
+                <a href="#" class="project-link">
+                  قيد التطوير <i class="fas fa-tools"></i>
+                </a>
+                <div class="project-stats">
+                  <span class="project-stat"
+                    ><i class="fas fa-chart-bar"></i> Data</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.hero h1::after {
-  content: "ASP.NET Developer | Data Analyst";
-  display: block;
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 600;
-  color: var(--accent2);
-  margin-top: -5px;
-}
+    <section class="section section-light" id="contact">
+      <div class="container">
+        <h2 class="section-title fade-in">تواصل معي</h2>
+        <p class="section-subtitle fade-in">
+          متاح لمناقشة فرص العمل والمشاريع الجديدة
+        </p>
 
-.hero p {
-  max-width: 700px;
-  margin: 20px auto 30px;
-  color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  font-weight: 300;
-  padding: 0 10px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
+        <div class="contact-content">
+          <div class="contact-info fade-in">
+            <h3>تواصل مع Mostafa Tarek</h3>
+            <p>
+              أنا متاح لمناقشة فرص العمل، المشاريع الجديدة، أو تبادل المعرفة في
+              مجالات ASP.NET وتحليل البيانات. لا تتردد في التواصل معي لأي
+              استفسار أو فرصة عمل.
+            </p>
 
-.cv-button {
-  display: inline-block;
-  background: var(--accent1);
-  color: var(--bg);
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  box-shadow: 0 0 15px var(--accent1);
-  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  max-width: 100%;
-  white-space: normal;
-  word-break: break-word;
-  text-align: center;
-  margin-top: 20px;
-}
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-at"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>البريد الإلكتروني</h4>
+                  <a href="mailto:mbdwy7484@gmail.com">mbdwy7484@gmail.com</a>
+                </div>
+              </div>
 
-.cv-button:hover {
-  transform: translateY(-5px);
-  opacity: 0.95;
-  box-shadow: 0 8px 20px var(--accent1);
-  color: var(--bg);
-}
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
+                    >github.com/Eng-Mostafa-Tarek</a
+                  >
+                </div>
+              </div>
 
-.section {
-  padding: 40px 0;
-}
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
+                    target="_blank"
+                    >linkedin.com/in/mostafa-tarek</a
+                  >
+                </div>
+              </div>
 
-h2 {
-  color: var(--accent2);
-  margin-bottom: 25px;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  border-bottom: 3px solid var(--accent3);
-  display: inline-block;
-  padding-bottom: 5px;
-  word-break: break-word;
-}
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>WhatsApp</h4>
+                  <a href="https://wa.me/201006876746" target="_blank"
+                    >+20 100 687 6746</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
 
-.card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
+          <div class="contact-form fade-in">
+            <h3>أرسل رسالة</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="name">الاسم بالكامل</label>
+                <input type="text" id="name" class="form-input" required />
+              </div>
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--box-shadow);
-}
+              <div class="form-group">
+                <label class="form-label" for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" class="form-input" required />
+              </div>
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
+              <div class="form-group">
+                <label class="form-label" for="message">الرسالة</label>
+                <textarea
+                  id="message"
+                  class="form-input"
+                  required
+                  placeholder="أخبرني عن مشروعك..."
+                ></textarea>
+              </div>
 
-.skill-item {
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text);
-  border-right: 4px solid var(--accent1);
-  padding-right: 10px;
-  word-break: break-word;
-}
+              <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.skill-item i {
-  color: var(--accent1);
-  font-size: 20px;
-  flex-shrink: 0;
-}
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Mostafa Tarek</h3>
+            <p>
+              مطور ASP.NET Core ومحلل بيانات متخصص في بناء تطبيقات الويب وتحليل
+              البيانات لاتخاذ القرارات الاستراتيجية.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/Eng-Mostafa-Tarek"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/mostafa-tarek-95048336b"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://wa.me/201006876746"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="mailto:mbdwy7484@gmail.com" class="social-link"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
 
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
+          <div class="footer-column">
+            <h3>روابط سريعة</h3>
+            <div class="footer-links">
+              <a href="#hero" class="footer-link">الرئيسية</a>
+              <a href="#about" class="footer-link">نبذة</a>
+              <a href="#projects" class="footer-link">المشاريع</a>
+              <a href="#contact" class="footer-link">تواصل</a>
+            </div>
+          </div>
 
-.project {
-  background: var(--card);
-  padding: 25px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: transform 0.3s, border 0.3s;
-  border-bottom: 4px solid var(--accent2);
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
+          <div class="footer-column">
+            <h3>المهارات</h3>
+            <div class="footer-links">
+              <a href="#about" class="footer-link">ASP.NET Core</a>
+              <a href="#about" class="footer-link">تحليل البيانات</a>
+              <a href="#about" class="footer-link">C# Programming</a>
+              <a href="#about" class="footer-link">Power BI</a>
+            </div>
+          </div>
 
-.project:hover {
-  transform: scale(1.02);
-  border-bottom-color: var(--accent3);
-}
+          <div class="footer-column">
+            <h3>التواصل</h3>
+            <div class="footer-links">
+              <a href="mailto:mbdwy7484@gmail.com" class="footer-link"
+                >mbdwy7484@gmail.com</a
+              >
+              <a
+                href="https://wa.me/201006876746"
+                target="_blank"
+                class="footer-link"
+                >+20 100 687 6746</a
+              >
+              <a
+                href="https://github.com/Eng-Mostafa-Tarek"
+                target="_blank"
+                class="footer-link"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
 
-.project h3 {
-  color: var(--accent3);
-  margin-top: 0;
-  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  word-break: break-word;
-}
+        <div class="footer-bottom">
+          <p>© 2026 Mostafa Tarek. جميع الحقوق محفوظة.</p>
+          <div class="developer-credit">
+            <p>
+              صمم بواسطة
+              <a href="https://github.com/Eng-Mostafa-Tarek" target="_blank"
+                >Mostafa Tarek</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-.project p {
-  color: var(--muted);
-  font-size: 15px;
-  margin-bottom: 15px;
-  word-break: break-word;
-}
+    <!-- JavaScript -->
+    <script type="module">
+      import TubesCursor from "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js";
 
-.project-link {
-  display: inline-block;
-  font-weight: 600;
-  margin-top: 10px;
-  color: var(--accent1);
-  word-break: break-word;
-}
+      const app = TubesCursor(document.getElementById("canvas"), {
+        tubes: {
+          colors: ["#58a6ff", "#5300b9", "#ffffff", "#d0d0d0"],
+          lights: {
+            intensity: 100,
+            colors: ["#58a6ff", "#5300b9", "#ffffff"],
+          },
+        },
+      });
 
-.project-link i {
-  margin-left: 5px;
-}
+      document.getElementById("canvas").style.backgroundColor = "transparent";
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  word-break: break-word;
-}
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text);
-  word-break: break-word;
-}
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
 
-.contact-item i {
-  color: var(--accent2);
-  font-size: 22px;
-  flex-shrink: 0;
-}
+      mobileMenuClose.addEventListener("click", function () {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
 
-footer {
-  text-align: center;
-  color: var(--muted);
-  margin-top: 50px;
-  padding: 25px 0;
-  font-size: 14px;
-  border-top: 1px solid var(--card);
-  word-break: break-word;
-}
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "auto";
+        });
+      });
 
-@media (max-width: 1024px) {
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-  .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  nav li {
-    width: 100%;
-  }
-  nav a {
-    display: block;
-    width: 100%;
-    padding: 8px 10px;
-  }
-  .skills-container {
-    grid-template-columns: 1fr !important;
-  }
-  .projects-container {
-    grid-template-columns: 1fr !important;
-  }
-  .hero h1 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-  }
-  .hero h1::after {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-  }
-  .cv-button {
-    padding: 10px 20px;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-  }
-  .neon-circle {
-    width: 180px;
-    height: 180px;
-  }
-  .profile-image {
-    width: 160px;
-    height: 160px;
-  }
-}
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: clamp(1.6rem, 6vw, 2rem);
-  }
-  .hero h1::after {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-  }
-  .cv-button {
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-  }
-  nav a {
-    padding: 10px;
-  }
-  .neon-circle {
-    width: 150px;
-    height: 150px;
-  }
-  .profile-image {
-    width: 130px;
-    height: 130px;
-  }
-}
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Contact Form
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("شكراً على رسالتك! سأتواصل معك قريباً.");
+          contactForm.reset();
+        });
+      }
+
+      // Animations
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const statNumbers = document.querySelectorAll(".stat-number");
+
+      function checkScroll() {
+        fadeElements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("visible");
+          }
+        });
+
+        // Animate counter numbers
+        statNumbers.forEach((number) => {
+          const numberTop = number.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (
+            numberTop < windowHeight - 100 &&
+            !number.classList.contains("animated")
+          ) {
+            animateCountUp(number);
+          }
+        });
+      }
+
+      function animateCountUp(element) {
+        element.classList.add("animated");
+        const target = parseInt(element.getAttribute("data-count"));
+        const suffix = element.textContent.includes("+")
+          ? "+"
+          : element.textContent.includes("%")
+          ? "%"
+          : "";
+
+        let count = 0;
+        const duration = 1500;
+        const increment = target / (duration / 16);
+
+        function updateCount() {
+          count += increment;
+          if (count < target) {
+            element.textContent = Math.floor(count) + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            element.textContent = target + suffix;
+          }
+        }
+
+        updateCount();
+      }
+
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        checkScroll();
+      });
+
+      // Initial check for animations
+      checkScroll();
+
+      // Nav link active state
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      function updateActiveNavLink() {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNavLink);
+    </script>
+  </body>
+</html>
